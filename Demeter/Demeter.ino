@@ -47,7 +47,7 @@ char r, g, b;
 
 String json;
 
-char rgb1[3];
+uint8_t rgb1[3];
 
 uint8_t deg_hole[8]  = {0x4, 0xa, 0xa, 0x4, 0x0, 0x0, 0x0};
 uint8_t deg[8]  = {0x4, 0xe, 0xe, 0x4, 0x0, 0x0, 0x0};
@@ -130,9 +130,9 @@ void loop()
         w_level = doc["w_level"];
         rgb = doc["RGB"];
         amb_temp = doc["temperature"];
-        rgb1[0] = rgb >> 16;
-        rgb1[1] = rgb >> 8;
-        rgb1[2] = rgb ;
+        rgb1[0] = rgb >> 16 & 0xFF;
+        rgb1[1] = rgb >> 8 & 0xFF;
+        rgb1[2] = rgb & 0xFF;
         
         //        Serial.print("Humid");
         //        Serial.println(amb_humid);

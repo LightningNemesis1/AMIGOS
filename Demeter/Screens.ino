@@ -51,7 +51,7 @@ void navScr()
   lcd.print("Sensor Data");
   lcd.setCursor(3, 1);
   lcd.print("Preset Modes");
-  
+
   lcd.setCursor(0, 3);
   lcd.print("Slide ");
   lcd.printByte(7);
@@ -67,11 +67,11 @@ void preScr()
 void tomato()
 {
   current = millis();
-  if(flag==0)
+  if (flag == 0)
   {
-    lcd.setCursor(4,1);
+    lcd.setCursor(4, 1);
     lcd.print("Tomato Mode");
-    lcd.setCursor(4,2);
+    lcd.setCursor(4, 2);
     lcd.print("___________");
     delay(3000);
     flag++;
@@ -87,79 +87,89 @@ void tomato()
   lcd.printByte(1);
   lcd.print("C");
 
-  while (millis() - current < 2000)
-  {
-    lcd.setCursor(4, 2);
-    lcd.print("R     G     B");
-    lcd.setCursor(3, 3);
-    lcd.print(rgb1[0]);
-    lcd.print("%  ");
-    lcd.print(rgb1[1]);
-    lcd.print("%  ");
-    lcd.print(rgb1[2]);
-    lcd.print("%");
-  }
-  
-  lcd.setCursor(0,3); //Eraser
-  for(j=0;j<4;j++)
-  {
-    lcd.print(" ");
-  }
-  rgb1[0] = 100, rgb1[1] = 20, rgb1[2] = 0;
-  current = millis();
+  lcd.setCursor(3, 2);
+  lcd.print("R     G     B");
+  lcd.setCursor(3, 3);
+  lcd.print(rgb1[0]);
+  lcd.print("%    ");
+  lcd.print(rgb1[1]);
+  lcd.print("%    ");
+  lcd.print(rgb1[2]);
+  lcd.print("%");
 
-  
-  
-  while (millis() - current < 1600)
-  {
-    lcd.setCursor(5, 2);
-    lcd.print("R     G     B");
-    lcd.setCursor(3, 3);
-    lcd.print(rgb1[0]);
-    lcd.print("%  ");
-    lcd.print(rgb1[1]);
-    lcd.print("%  ");
-    lcd.print(rgb1[2]);
-    lcd.print("%");
-  }
-  lcd.setCursor(0,3); //Eraser
-  for(j=0;j<4;j++)
-  {
-    lcd.print(" ");
-  }
-  rgb1[0] = 100, rgb1[1] = 0, rgb1[2] = 50;
-  current = millis();
-  while (millis() - current < 2400)
-  {
-    lcd.setCursor(5, 2);
-    lcd.print("R     G     B");
-    lcd.setCursor(3, 3);
-    lcd.print(rgb1[0]);
-    lcd.print("%  ");
-    lcd.print(rgb1[1]);
-    lcd.print("%  ");
-    lcd.print(rgb1[2]);
-    lcd.print("%");
-  }
-  lcd.setCursor(0,3); //Eraser
-  for(j=0;j<4;j++)
-  {
-    lcd.print(" ");
-  }
-  rgb1[0] = 20, rgb1[1] = 0, rgb1[2] = 100;
-  current = millis();
-  while (millis() - current < 2500)
-  {
-    lcd.setCursor(5, 2);
-    lcd.print("R     G     B");
-    lcd.setCursor(3, 3);
-    lcd.print(rgb1[0]);
-    lcd.print("%  ");
-    lcd.print(rgb1[1]);
-    lcd.print("%  ");
-    lcd.print(rgb1[2]);
-    lcd.print("%");
-  }
+//  while (millis() - current < 2000)
+//  {
+//    lcd.setCursor(4, 2);
+//    lcd.print("R     G     B");
+//    lcd.setCursor(3, 3);
+//    lcd.print(rgb1[0]);
+//    lcd.print("%  ");
+//    lcd.print(rgb1[1]);
+//    lcd.print("%  ");
+//    lcd.print(rgb1[2]);
+//    lcd.print("%");
+//  }
+//
+//  lcd.setCursor(0, 3); //Eraser
+//  for (j = 0; j < 4; j++)
+//  {
+//    lcd.print(" ");
+//  }
+//  //rgb1[0] = 100, rgb1[1] = 20, rgb1[2] = 0;
+//  current = millis();
+//
+//
+//
+//  while (millis() - current < 1600)
+//  {
+//    lcd.setCursor(5, 2);
+//    lcd.print("R     G     B");
+//    lcd.setCursor(3, 3);
+//    lcd.print(rgb1[0]);
+//    lcd.print("%  ");
+//    lcd.print(rgb1[1]);
+//    lcd.print("%  ");
+//    lcd.print(rgb1[2]);
+//    lcd.print("%");
+//  }
+//  lcd.setCursor(0, 3); //Eraser
+//  for (j = 0; j < 4; j++)
+//  {
+//    lcd.print(" ");
+//  }
+//  //rgb1[0] = 100, rgb1[1] = 0, rgb1[2] = 50;
+//  current = millis();
+//  while (millis() - current < 2400)
+//  {
+//    lcd.setCursor(5, 2);
+//    lcd.print("R     G     B");
+//    lcd.setCursor(3, 3);
+//    lcd.print(rgb1[0]);
+//    lcd.print("%  ");
+//    lcd.print(rgb1[1]);
+//    lcd.print("%  ");
+//    lcd.print(rgb1[2]);
+//    lcd.print("%");
+//  }
+//  lcd.setCursor(0, 3); //Eraser
+//  for (j = 0; j < 4; j++)
+//  {
+//    lcd.print(" ");
+//  }
+//  rgb1[0] = 20, rgb1[1] = 0, rgb1[2] = 100;
+//  current = millis();
+//  while (millis() - current < 2500)
+//  {
+//    lcd.setCursor(5, 2);
+//    lcd.print("R     G     B");
+//    lcd.setCursor(3, 3);
+//    lcd.print(rgb1[0]);
+//    lcd.print("%  ");
+//    lcd.print(rgb1[1]);
+//    lcd.print("%  ");
+//    lcd.print(rgb1[2]);
+//    lcd.print("%");
+//  }
 }
 
 //void spinach()
@@ -226,5 +236,5 @@ void tomato()
 
 void comm()
 {
-  
+
 }
